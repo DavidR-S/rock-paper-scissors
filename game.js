@@ -30,4 +30,26 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound("Rock", getComputerChoice()))
+function game() {
+    let outcome;
+    let wins = 0;
+    let losses = 0;
+    let draws = 0;
+    for (let i = 0; i < 5; i++){
+        outcome = playRound(prompt(), getComputerChoice())
+        if (outcome === "win"){
+            wins += 1;
+        }
+        else if (outcome == "loss") {
+            losses += 1;
+        }
+        else {
+            draws += 1;
+        }
+    }
+    console.log(wins);
+    console.log(losses);
+    console.log(draws);
+}
+
+game();
