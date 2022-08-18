@@ -11,3 +11,23 @@ function getComputerChoice() {
     }
     
 }
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return "draw"
+    }
+    else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        return "win"
+    }
+    else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        return "win"
+    }
+    else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        return "win"
+    }
+    else {
+        return "loss"
+    }
+}
+
+console.log(playRound("Rock", getComputerChoice()))
